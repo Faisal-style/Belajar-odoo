@@ -1,0 +1,20 @@
+<odoo>
+    <!--library menu app-->
+    <menuitem id = "menu_library" name = "LIBRARY"/>
+
+    <!--action to open the book list-->
+    <record id = "action_library_book" model = "ir.actions.act_window">
+        <field name = "name">Library Books</field>
+        <field name = "res_model">library.book</field>
+        <field name = "view_mode">tree,form</field>
+    </record>
+
+    <!--menu to open teh book list-->
+    <menuitem id = "menu_library_book"
+              name = "BOOKS"
+              parent = "menu_library"
+              action = "action_library_book"
+    />
+
+
+</odoo>

@@ -1655,7 +1655,7 @@ class _String(Field):
     translate = False                   # whether the field is translated
     unaccent = True
 
-    def __init__(self, string=Default, **kwargs):
+    def __init__(self, string: object = Default, **kwargs: object) -> object:
         # translate is either True, False, or a callable
         if 'translate' in kwargs and not callable(kwargs['translate']):
             kwargs['translate'] = bool(kwargs['translate'])
